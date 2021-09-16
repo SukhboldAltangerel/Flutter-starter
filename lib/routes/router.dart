@@ -1,5 +1,5 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_application_2/screens/chat.dart';
 import 'package:flutter_application_2/screens/home.dart';
 import 'package:flutter_application_2/screens/login.dart';
 import 'package:flutter_application_2/screens/profile.dart';
@@ -13,5 +13,6 @@ final routes = RouteMap(
     '/sign-up': (_) => MaterialPage(child: SignUpScreen()),
     '/profile/:id': (route) =>
         MaterialPage(child: ProfileScreen(id: route.pathParameters['id'])),
+    '/chat': (_) => MaterialPage(child: ChatScreen()),
   },
 );

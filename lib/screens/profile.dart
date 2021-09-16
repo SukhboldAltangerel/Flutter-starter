@@ -15,13 +15,13 @@ class _ProfileScreenState extends State<ProfileScreen> {
   @override
   void initState() {
     super.initState();
-    print(widget.id);
+    userId = widget.id;
   }
 
   @override
   Widget build(BuildContext context) {
     return Container(
-      child: Text('Profile screen ${widget.id}'),
+      child: Text('Profile screen $userId'),
     );
   }
 }
