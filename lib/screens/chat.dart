@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_2/utilities/fetch.dart';
 import 'package:flutter_application_2/utilities/graphql/queries.dart';
+import 'package:hive_flutter/hive_flutter.dart';
 
 class ChatScreen extends StatefulWidget {
   const ChatScreen({Key? key}) : super(key: key);
@@ -23,6 +24,8 @@ class _ChatScreenState extends State<ChatScreen> {
     setState(() {
       chat = res['getChatRedis'];
     });
+    var chatBox = Hive.box('chatBox');
+    chatBox.put('chat', res['getChatRedis']);
   }
 
   @override
